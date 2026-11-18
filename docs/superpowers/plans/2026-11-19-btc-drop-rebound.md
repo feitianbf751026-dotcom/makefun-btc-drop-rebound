@@ -39,11 +39,11 @@
 - Consumes: official `BarsState`, `Batch`, and `OrderInput` types.
 - Produces: `StrategyConfig`, `DEFAULT_CONFIG`, and `createStrategy(config): Bot`.
 
-- [ ] Write tests showing no entry on the drop alone, entry only on a later rebound close, no warm-up order, no order on a missing bar, full-position exits, and identical prefix orders under different future suffixes.
-- [ ] Run `node --test test/strategy.test.ts`; expect failure because `strategy.ts` does not exist.
-- [ ] Implement the minimal state machine in `strategy.ts` and copy the official SDK shim byte-for-byte.
-- [ ] Run `node --test test/strategy.test.ts`; expect all tests to pass.
-- [ ] Commit the independently passing strategy task.
+- [x] Write tests showing no entry on the drop alone, entry only on a later rebound close, no warm-up order, no order on a missing bar, full-position exits, and identical prefix orders under different future suffixes.
+- [x] Run `node --test test/strategy.test.ts`; expect failure because `strategy.ts` does not exist.
+- [x] Implement the minimal state machine in `strategy.ts` and copy the official SDK shim byte-for-byte.
+- [x] Run `node --test test/strategy.test.ts`; expect all tests to pass.
+- [x] Commit the independently passing strategy task.
 
 ### Task 2: Protocol entrypoint and dev screening
 

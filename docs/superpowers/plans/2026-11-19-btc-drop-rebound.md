@@ -76,8 +76,8 @@
 - Consumes: final source tree and current native Codex rollout.
 - Produces: official local grade/check logs, transcript archive, source hashes, and unsigned submission handoff.
 
-- [ ] Run the official local grade with `--driver process --json --save`, capture exact stdout/stderr, and require net PnL above zero after fees.
-- [ ] Run the complete tests and official pre-submit check against the worktree; record all pass/fail/skip output without editing it.
-- [ ] Run `bundle --dry-run` against the current native Codex JSONL, then create the real archive and record its SHA-256 and file list.
-- [ ] Re-read the design requirements and verify each with a concrete file or command result.
+- [x] Run the official local grade with `--driver process --json --save`, capture exact stdout/stderr, and require net PnL above zero after fees.
+- [x] Run the complete tests and official pre-submit check against the worktree; record all pass/fail/skip output without editing it.
+- [x] Run `bundle --dry-run` against the current native Codex JSONL, then create the real archive and record its SHA-256 and file list.
+- [x] Re-read the design requirements and verify each with a concrete file or command result.
 - [ ] Commit the evidence and produce the entry-signature command/message for user confirmation without signing or submitting.

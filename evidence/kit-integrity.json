@@ -1,0 +1,16 @@
+{
+  "kit_url": "https://make.fun/c/btc-race-24h-20261118-1444/kit",
+  "downloads": 2,
+  "download_bytes": 7519918,
+  "downloads_byte_identical": true,
+  "response_x_kit_sha256": "967452c5aa96f0161b234072da20a79a46edda3f1dd6359ed0e5784a6ff931b6",
+  "download_sha256": "3e3327cf800552b4043c3e20dc617f5858941a7dcb491d247ef259064be91bad",
+  "outer_hash_matches_response": false,
+  "archive_path_traversal_entries": 0,
+  "manifest_files_checked": 29,
+  "manifest_file_mismatches": 0,
+  "kit_bundle_sha256": "157048c6db4067eb660ddfcf63962509d87f4463cee7b29b60cf9bd93bf2c934",
+  "dataset_sha256": "d81f50d5f663994f1b3088c7627f1a9c830ae419e0b21ec215f4884ca7fab30f",
+  "vendor_sdk_sha256": "9677370b0ab7e759c486a929afc95a11fb0fb32c7ec37053d3ebabd426aec5c8",
+  "note": "The repeated outer archive hash differs from the HTTP header. Every extracted member matched kit.json before the CLI or harness was run; both values are retained for audit."
+}

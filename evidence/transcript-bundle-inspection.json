@@ -1,0 +1,35 @@
+{
+  "format": "agent-fun/transcript-bundle/v1",
+  "archive": "transcripts.tar.gz",
+  "archive_sha256_at_inspection": "00da804221b786bcdf2b97671d197a2f9295a663293996c76bff88879cfc55f4",
+  "archive_bytes_at_inspection": 1396218,
+  "native_codex_sessions": 4,
+  "root_sessions": 1,
+  "subagent_sessions": 3,
+  "context_files": 2,
+  "run_record_missing_fields": 0,
+  "automatic_redactions": {
+    "email": 5,
+    "home_path": 238,
+    "username": 88,
+    "claim_code": 1,
+    "generic_secret": 3,
+    "setting": 11
+  },
+  "local_makefun_check": {
+    "sessions_parsed": 4,
+    "messages": 271,
+    "usage_records": 123,
+    "authored_lines": 532,
+    "counted_lines": 1408,
+    "authored_coverage": "0.377",
+    "failed_checks": 0
+  },
+  "sensitive_structure_scan": {
+    "base_instructions_fields": 4,
+    "developer_role_records": 21,
+    "content_printed_or_copied_to_evidence": false
+  },
+  "upload_ready": false,
+  "reason": "The native archive is structurally valid and passes the local Make.fun transcript checks, but it retains internal platform system/developer instructions. It is kept locally and must not be uploaded unless an approved prompt-redaction workflow produces a new archive that is rechecked."
+}

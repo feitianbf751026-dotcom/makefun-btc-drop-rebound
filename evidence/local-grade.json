@@ -1,0 +1,234 @@
+{
+  "competition": "btc-race-24h-20261118-1444",
+  "phase": "dev",
+  "driver": "process",
+  "bot": {
+    "path": "D:\\Web3 & Crypto Markets\\take orders\\Make.fun\\btc-drop-rebound-bot",
+    "commit": "worktree@2f866f8b8f24",
+    "source": "worktree",
+    "dirty": false,
+    "snapshot_sha256": "aeab094b404fa59e9b12674542454deb4d0e29293cefbd7175a23879744ad097"
+  },
+  "status": "finished",
+  "error": null,
+  "result": {
+    "schema": "agent-fun/score/v1",
+    "harness": {
+      "kind": "bars-replay/v1",
+      "version": "harness@6cd2f7103e5cc31f28573f71a7e208d605616f58b034ff6d32bbc81b30d8d945 node v24.14.0"
+    },
+    "scorer_version": "scorer@a3fd8fbf965211dac0d76f162c7cdbd8e72cf773b92e4c3853b632214446bdc0",
+    "image_digest": null,
+    "dataset_sha256": "d81f50d5f663994f1b3088c7627f1a9c830ae419e0b21ec215f4884ca7fab30f",
+    "action_log_sha256": "6eef8bbf5d58f6e8038bdc78757a0092de9466ef7d6b7296fdfd26f5eab668d3",
+    "seed": "15327390277217626507",
+    "performance": {
+      "kind": "bars-replay/v1",
+      "metrics": {
+        "net_pnl_quote_units": "6959769",
+        "return": "0.006959769",
+        "sharpe": "0.014127932",
+        "sortino": "0.025752497",
+        "max_drawdown": "0.010883628",
+        "win_rate": "0.500000000",
+        "trades": 4,
+        "rejected": 0,
+        "distinct_symbols": 1,
+        "fees_quote_units": "1610947",
+        "exposure": "0.089583333",
+        "per_symbol": [
+          {
+            "symbol": "CBBTC",
+            "pnl_quote_units": "6959769",
+            "trades": 4,
+            "fees_quote_units": "1610947"
+          }
+        ],
+        "interval": {
+          "level": "0.900000000",
+          "method": "bootstrap-symbols",
+          "resamples": 1000,
+          "seed": "15327390277217626507",
+          "low_quote_units": "6959769",
+          "high_quote_units": "6959769"
+        },
+        "block_hours": 1,
+        "per_block": [
+          {
+            "block": 0,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 1,
+            "pnl_quote_units": "4159803"
+          },
+          {
+            "block": 2,
+            "pnl_quote_units": "-454002"
+          },
+          {
+            "block": 3,
+            "pnl_quote_units": "3253968"
+          },
+          {
+            "block": 4,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 5,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 6,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 7,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 8,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 9,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 10,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 11,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 12,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 13,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 14,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 15,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 16,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 17,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 18,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 19,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 20,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 21,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 22,
+            "pnl_quote_units": "0"
+          },
+          {
+            "block": 23,
+            "pnl_quote_units": "0"
+          }
+        ],
+        "cost_sensitivity": {
+          "fee_multiplier": 2,
+          "net_pnl_quote_units": "5352350"
+        },
+        "constraints": {
+          "min_trades": 1,
+          "min_distinct_symbols": 0,
+          "max_drawdown": "0.250000000",
+          "trades_ok": true,
+          "symbols_ok": true,
+          "drawdown_ok": true,
+          "compliant": true
+        },
+        "contamination": {
+          "no_future_bars": true,
+          "final_window_first_bar_time": null,
+          "last_graded_receipt_at": null,
+          "window_after_receipts": null,
+          "dataset_sha256": "d81f50d5f663994f1b3088c7627f1a9c830ae419e0b21ec215f4884ca7fab30f"
+        }
+      }
+    },
+    "cost": {
+      "pricing_rev": "6a262a9d0245fc1bb135c62775a6abd481aace3029ff2857a45310eb172ac899",
+      "micro_usd": null,
+      "priced_micro_usd": "0",
+      "lines": 0,
+      "unpriced_lines": 0,
+      "partial_lines": 0,
+      "inconsistent_lines": 0,
+      "tokens": {
+        "input": "0",
+        "output": "0",
+        "cache_read": "0",
+        "cache_write_5m": "0",
+        "cache_write_1h": "0",
+        "reasoning": "0"
+      },
+      "models": [],
+      "provenance": "none"
+    },
+    "authorship": {
+      "algo_version": 11,
+      "lines_total": 1085,
+      "authored": 0,
+      "pasted": 0,
+      "read": 0,
+      "absent": 1085,
+      "authored_coverage": "0.000000000",
+      "micro_usd_per_surviving_line": null,
+      "dead_spend": null
+    },
+    "eligibility": {
+      "ranked": true,
+      "prize_eligible": false,
+      "efficiency_eligible": false,
+      "reasons": [
+        "no_transcripts",
+        "coverage_below_gate",
+        "cost_unpriced"
+      ]
+    },
+    "flags": []
+  },
+  "result_sha256": "6794a363330c8344e3ce693f58feca5204c0e20fa1cc591c26a0d03743ad2b08",
+  "action_log_sha256": "6eef8bbf5d58f6e8038bdc78757a0092de9466ef7d6b7296fdfd26f5eab668d3",
+  "l1": {
+    "reproduced": true,
+    "error": null
+  },
+  "mismatches": [
+    "node: the server's harness runs v26.13.1, this one v24.14.0"
+  ],
+  "expected": null,
+  "notes": [
+    "process driver: the bot ran on this machine unisolated and the score records no image digest; a server grading in its docker sandbox records one, so only a server on the process driver (a dev server) records this result_sha256"
+  ],
+  "stderr_tail": "",
+  "quote_scale": 6
+}
+

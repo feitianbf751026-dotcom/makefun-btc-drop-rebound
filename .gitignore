@@ -1,0 +1,5 @@
+.superpowers/
+evidence/local-grade/
+transcripts.tar.gz
+*.tmp
+*.log.raw

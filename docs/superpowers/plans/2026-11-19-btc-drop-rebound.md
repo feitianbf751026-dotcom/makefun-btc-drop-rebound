@@ -57,11 +57,11 @@
 - Consumes: `createStrategy(DEFAULT_CONFIG)` and official `runBars`.
 - Produces: valid one-reply-per-batch NDJSON behavior and a recorded finite parameter ranking.
 
-- [ ] Write a child-process protocol test with literal hello/batch/done lines; assert valid replies and that the rebound decision is emitted on the expected sequence.
-- [ ] Run `node --test test/protocol.test.ts`; expect failure because `main.ts` does not exist.
-- [ ] Implement `main.ts` as the SDK adapter, then add the deterministic search script and record its command/config/data hashes.
-- [ ] Run `node --test`; expect the full suite to pass with no warning or stderr.
-- [ ] Commit the independently passing protocol/search task.
+- [x] Write a child-process protocol test with literal hello/batch/done lines; assert valid replies and that the rebound decision is emitted on the expected sequence.
+- [x] Run `node --test test/protocol.test.ts`; expect failure because `main.ts` does not exist.
+- [x] Implement `main.ts` as the SDK adapter, then add the deterministic search script and record its command/config/data hashes.
+- [x] Run `node --test`; expect the full suite to pass with no warning or stderr.
+- [x] Commit the independently passing protocol/search task.
 
 ### Task 3: Official grading and compliance evidence
 

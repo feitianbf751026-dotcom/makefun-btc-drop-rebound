@@ -24,15 +24,15 @@ export interface StrategyConfig {
 }
 
 export const DEFAULT_CONFIG: StrategyConfig = {
-  lookbackBars: 30,
-  dropBps: 60,
-  reboundBps: 15,
-  setupExpiryBars: 60,
+  lookbackBars: 60,
+  dropBps: 180,
+  reboundBps: 10,
+  setupExpiryBars: 120,
   positionBps: 10_000,
-  takeProfitBps: 45,
-  stopLossBps: 80,
-  trailingArmedBps: 30,
-  trailingStopBps: 20,
+  takeProfitBps: 90,
+  stopLossBps: 150,
+  trailingArmedBps: 65,
+  trailingStopBps: 35,
   maxHoldBars: 120,
   maxSlippageBps: 100,
 };

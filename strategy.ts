@@ -45,6 +45,7 @@ interface Series {
   wasHolding: boolean;
   heldBars: number;
   highWhileHeld: bigint | null;
+  trailEnabled: boolean;
 }
 
 const freshSeries = (): Series => ({
@@ -55,6 +56,7 @@ const freshSeries = (): Series => ({
   wasHolding: false,
   heldBars: 0,
   highWhileHeld: null,
+  trailEnabled: false,
 });
 
 const ratioAtLeast = (left: bigint, right: bigint, bps: number) => left * BPS >= right * (BPS + BigInt(bps));
@@ -88,6 +90,7 @@ export function createStrategy(config: StrategyConfig = DEFAULT_CONFIG): Bot {
         if (!series.wasHolding) {
           series.heldBars = 0;
           series.highWhileHeld = close;
+          series.trailEnabled = false;
         }
         series.wasHolding = true;
         series.heldBars++;
@@ -96,8 +99,8 @@ export function createStrategy(config: StrategyConfig = DEFAULT_CONFIG): Bot {
         const marked = state.value(symbol, held.qty);
         const profit = ratioAtLeast(marked, held.cost, config.takeProfitBps);
         const stop = ratioAtMost(marked, held.cost, config.stopLossBps);
-        const trailArmed = ratioAtLeast(marked, held.cost, config.trailingArmedBps);
-        const trail = trailArmed && ratioAtMost(close, series.highWhileHeld, config.trailingStopBps);
+        if (ratioAtLeast(marked, held.cost, config.trailingArmedBps)) series.trailEnabled = true;
+        const trail = series.trailEnabled && ratioAtMost(close, series.highWhileHeld, config.trailingStopBps);
         if (profit || stop || trail || series.heldBars >= config.maxHoldBars) {
           const sell: SellInput = {
             side: 'sell',
@@ -114,19 +117,21 @@ export function createStrategy(config: StrategyConfig = DEFAULT_CONFIG): Bot {
         series.wasHolding = false;
         series.heldBars = 0;
         series.highWhileHeld = null;
+        series.trailEnabled = false;
       }
 
       let peak = close;
       for (const value of series.closes) if (value > peak) peak = value;
+      let armedNow = false;
       if (series.closes.length >= config.lookbackBars && ratioAtMost(close, peak, config.dropBps)) {
         if (!series.armed) {
           series.armed = true;
           series.armedBars = 0;
           series.low = close;
+          armedNow = true;
         }
-      } else if (series.armed) {
-        series.armedBars++;
       }
+      if (series.armed && !armedNow) series.armedBars++;
       if (series.armed && (series.low === null || close < series.low)) series.low = close;
       if (series.armed && series.armedBars > config.setupExpiryBars) {
         series.armed = false;

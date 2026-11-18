@@ -4,10 +4,10 @@
   "driver": "process",
   "bot": {
     "path": "D:\\Web3 & Crypto Markets\\take orders\\Make.fun\\btc-drop-rebound-bot",
-    "commit": "worktree@2f866f8b8f24",
+    "commit": "worktree@49de4a81dc39",
     "source": "worktree",
     "dirty": false,
-    "snapshot_sha256": "aeab094b404fa59e9b12674542454deb4d0e29293cefbd7175a23879744ad097"
+    "snapshot_sha256": "634cb5915b9486dedc270e285e865abf260537ca6f59c00a46454eb574c3f662"
   },
   "status": "finished",
   "error": null,
@@ -194,11 +194,11 @@
     },
     "authorship": {
       "algo_version": 11,
-      "lines_total": 1085,
+      "lines_total": 1627,
       "authored": 0,
       "pasted": 0,
       "read": 0,
-      "absent": 1085,
+      "absent": 1627,
       "authored_coverage": "0.000000000",
       "micro_usd_per_surviving_line": null,
       "dead_spend": null
@@ -215,7 +215,7 @@
     },
     "flags": []
   },
-  "result_sha256": "6794a363330c8344e3ce693f58feca5204c0e20fa1cc591c26a0d03743ad2b08",
+  "result_sha256": "7e007052bf5d69400ee0b8afeee1b2ec5da1ef4b241537a95c2954567a1c0f4d",
   "action_log_sha256": "6eef8bbf5d58f6e8038bdc78757a0092de9466ef7d6b7296fdfd26f5eab668d3",
   "l1": {
     "reproduced": true,

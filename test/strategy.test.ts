@@ -111,6 +111,28 @@ test('a take-profit exits the entire official position', async () => {
   }]);
 });
 
+test('a trailing exit stays armed after profit falls below its activation level', async () => {
+  const bot = createStrategy(CONFIG);
+  const position = { qty: 123_456_789n, cost: 500_000_000n };
+
+  assert.deepEqual(await decide(bot, 0, 10_200, { position, markedValue: 511_000_000n }), []);
+  assert.deepEqual(await decide(bot, 1, 10_040, { position, markedValue: 507_500_000n }), [{
+    side: 'sell',
+    symbol: 'CBBTC',
+    qty: 123_456_789n,
+    max_slippage_bps: 100,
+  }]);
+});
+
+test('an armed setup expires even while the deep drawdown persists', async () => {
+  const bot = createStrategy({ ...CONFIG, setupExpiryBars: 2 });
+  const closes = [10_000, 10_000, 9_400, 9_300, 9_200, 9_300];
+  const orders = [];
+  for (let seq = 0; seq < closes.length; seq++) orders.push(await decide(bot, seq, closes[seq]));
+
+  assert.deepEqual(orders.flat(), []);
+});
+
 test('different future suffixes cannot change prefix decisions', async () => {
   async function prefix(suffix: number[]) {
     const bot = createStrategy(CONFIG);
